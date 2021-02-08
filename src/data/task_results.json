@@ -1,0 +1,22 @@
+[
+  {
+    "id": 0,
+    "userId": 0,
+    "taskId": 0,
+    "mark": 10,
+    "solution": [
+      { "key": -1, "from": 0, "to": 1 },
+      { "key": -2, "from": 1, "to": 2 }
+    ]
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "taskId": 1,
+    "mark": 11,
+    "solution": [
+      { "key": -1, "from": 0, "to": 1 },
+      { "key": -2, "from": 1, "to": 2 }
+    ]
+  }
+]

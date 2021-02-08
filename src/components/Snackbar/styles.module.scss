@@ -1,0 +1,32 @@
+@import '../../styles/main';
+
+.snackbar {
+  color: $white;
+
+  .variant {
+    &.success {
+      background-color: $success;
+    }
+    &.error {
+      background-color: $error;
+    }
+    &.info {
+      background-color: $info;
+    }
+    &.warning {
+      background-color: $warning;
+    }
+  }
+  .message {
+    display: flex;
+    align-items: center;
+    color: $white;
+    .icon-variant {
+      opacity: 0.9;
+      margin-right: rem(8);
+    }
+  }
+  .icon {
+    font-size: rem(20);
+  }
+}

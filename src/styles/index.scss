@@ -1,0 +1,115 @@
+@import 'reset';
+@import 'fonts';
+
+@import 'main';
+
+html,
+body,
+#root,
+.page {
+  min-height: 100vh;
+  max-width: 100vw;
+  font-size: $fontSize;
+  overflow-x: hidden;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+html {
+  overflow-y: scroll;
+}
+
+html,
+body {
+  width: 100vw;
+}
+
+#root,
+.page {
+  width: 100%;
+}
+
+.page {
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+
+  .page-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-self: stretch;
+
+    flex-grow: 1;
+
+    @extend %fullwidth;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: $calatinaBlue;
+}
+
+#modal-root {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+}
+
+@import 'image';
+
+@include media-lg {
+  html,
+  body {
+    font-size: calc(#{$fontSize} - 1px);
+  }
+}
+
+@include media-md {
+  html,
+  body {
+    font-size: calc(#{$fontSize} - 2px);
+  }
+}
+
+@include media-sm {
+  html,
+  body {
+    font-size: calc(#{$fontSize} - 2px);
+  }
+}
+
+@include media-xs {
+}
+
+@include media-xxs {
+  html,
+  body,
+  .page {
+    width: 320px !important;
+  }
+}
+
+form,
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+button {
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.center-container {
+  @extend %center-container;
+}
+
+.fullwidth {
+  @extend %fullwidth;
+}

@@ -1,0 +1,47 @@
+[
+  {
+    "id": 0,
+    "firstName": "Mykyta",
+    "lastName": "Savchuk",
+    "email": "savchuk@gmail.com",
+    "avatar": "",
+    "type": "student",
+    "password": "123456"
+  },
+  {
+    "id": 1,
+    "firstName": "Vadym",
+    "lastName": "Teliachiy",
+    "email": "vtelyachy@gmail.com",
+    "avatar": "",
+    "type": "student",
+    "password": "123456"
+  },
+  {
+    "id": 2,
+    "firstName": "Dyma",
+    "lastName": "Rydevich",
+    "email": "rudikd@gmail.com",
+    "avatar": "",
+    "type": "student",
+    "password": "123456"
+  },
+  {
+    "id": 3,
+    "firstName": "Alex",
+    "lastName": "Alex",
+    "email": "alexalex@gmail.com",
+    "avatar": "",
+    "type": "student",
+    "password": "123456"
+  },
+  {
+    "id": 4,
+    "firstName": "Admin",
+    "lastName": "Admin",
+    "email": "admin@admin.com",
+    "avatar": "",
+    "type": "admin",
+    "password": "123456"
+  }
+]

@@ -1,0 +1,117 @@
+@import 'variables';
+
+@mixin ellipsis($linesNumber) {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $linesNumber;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+}
+
+@function calc_width_padding($width) {
+  @return calc((100vw - #{$width}) / 2);
+}
+@mixin width-padding($width) {
+  $padding: calc_width_padding($width);
+  padding-left: $padding;
+  padding-right: $padding;
+}
+
+@mixin width-margin($width) {
+  margin-left: calc((100vw - #{$width}) / 2);
+  margin-right: calc((100vw - #{$width}) / 2);
+}
+
+@function px_to_rem($pixels, $context: $fontSize) {
+  @return $pixels / $context * 1rem;
+}
+
+@function rem($size, $context: $fontSize) {
+  @if unitless($size) {
+    @return px_to_rem($size * 1px, $context);
+  } @else if unit($size) == 'px' {
+    @return px_to_rem($size, $context);
+  } @else {
+    @warn "Not supported value: #{$value}";
+    @return $size;
+  }
+}
+
+@function px_to_em($pixels, $context: $fontSize) {
+  @return $pixels / $context * 1em;
+}
+
+@function em($size, $context: $fontSize) {
+  @if unitless($size) {
+    @return px_to_em($size * 1px, $context);
+  } @else if unit($size) == 'px' {
+    @return px_to_em($size, $context);
+  } @else {
+    @warn "Not supported value: #{$value}";
+    @return $size;
+  }
+}
+
+@mixin media($max) {
+  @media screen and (max-width: $max) {
+    @content;
+  }
+}
+
+@mixin media-xxs {
+  @include media($xxs) {
+    @content;
+  }
+}
+
+@mixin media-xs {
+  @include media($xs) {
+    @content;
+  }
+}
+
+@mixin media-sm {
+  @include media($sm) {
+    @content;
+  }
+}
+
+@mixin media-md {
+  @include media($md) {
+    @content;
+  }
+}
+
+@mixin media-lg {
+  @include media($lg) {
+    @content;
+  }
+}
+
+@mixin media-xl {
+  @include media($xl) {
+    @content;
+  }
+}
+
+@mixin media-xxl {
+  @include media($xxl) {
+    @content;
+  }
+}
+
+@mixin user-select($type) {
+  -webkit-user-select: $type;
+  -moz-user-select: $type;
+  -ms-user-select: $type;
+  user-select: $type;
+}
+
+@function css-min($numbers...) {
+  @return #{'min(#{$numbers})'};
+}
+
+@function css-max($numbers...) {
+  @return #{'max(#{$numbers})'};
+}

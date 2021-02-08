@@ -1,0 +1,31 @@
+@import '../../styles/main';
+
+:global(.page).page {
+  .page-content {
+    align-items: stretch;
+    padding-bottom: rem(16);
+    .title {
+      font-family: $fontFamily;
+      font-size: rem(30);
+      font-weight: bold;
+
+      margin: rem(20) 0 rem(16);
+    }
+    .description {
+      font-family: $fontFamily;
+      font-size: rem(16);
+      margin: 0 0 rem(16);
+    }
+    .diagram {
+      &,
+      div {
+        &::-webkit-scrollbar {
+          display: none;
+        }
+
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+    }
+  }
+}

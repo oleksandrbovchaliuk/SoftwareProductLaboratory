@@ -1,0 +1,10 @@
+@import '../../styles/main';
+
+.loader-container {
+  background-color: rgba($calatinaBlue, $alpha: 0.4);
+  .loader {
+    color: $calatinaBlue;
+    width: rem(120) !important;
+    height: rem(120) !important;
+  }
+}

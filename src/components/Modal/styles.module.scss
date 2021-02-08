@@ -1,0 +1,25 @@
+@import '../../styles/main';
+
+.modal-container {
+  @extend %center-container;
+  flex-direction: column;
+
+  &.modal-container-open {
+    position: fixed;
+  }
+  &.modal-container-close {
+    display: none;
+  }
+  &.modal-container-cover-screen {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+  .modal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}

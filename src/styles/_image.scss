@@ -1,0 +1,32 @@
+.svg {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  svg,
+  div {
+    display: inline-flex;
+    max-width: inherit;
+    max-height: inherit;
+    width: inherit;
+    height: inherit;
+    object-fit: contain;
+  }
+  &.cover {
+    div,
+    svg {
+      object-fit: cover;
+    }
+  }
+}
+
+img,
+.img {
+  max-width: inherit;
+  max-height: inherit;
+  width: inherit;
+  height: inherit;
+  object-fit: cover;
+  &.contain {
+    object-fit: contain;
+  }
+}
